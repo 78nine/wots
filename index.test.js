@@ -139,6 +139,14 @@ describe('whatis:', function () {
       assert(whatis(new Function('return null;')) === 'function')
     })
     
+    it('Object', function () {
+      assert(whatis({}) === 'object')
+      assert(whatis({ foo: 'bar' }) === 'object')
+      assert(whatis({ method: noop }) === 'object')
+      assert(whatis(new Object()) === 'object')
+      assert(whatis(Object.create(Object.create(Object.prototype))) === 'object')
+    })
+    
     it('Promise', function () {
       assert(whatis(new Promise(noop)) === 'promise')
       assert(whatis(Promise.resolve('data')) === 'promise')
