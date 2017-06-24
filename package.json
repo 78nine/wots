@@ -1,12 +1,23 @@
 {
   "name": "what-is",
-  "description": "A very simple \"typeof\" extension library",
+  "description": "A very simple \"typeof\" detection",
   "version": "0.1.0",
   "main": "index.js",
   "scripts": {
     "test": "mocha *.test.js"
   },
   "keywords": [
+    "isArray",
+    "isDate",
+    "isNaN",
+    "isInfinity",
+    "isNull",
+    "isUndefined",
+    "isObject",
+    "isRegExp",
+    "isString",
+    "kind",
+    "type",
     "typeof"
   ],
   "devDependencies": {
