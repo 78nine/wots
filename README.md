@@ -1,6 +1,11 @@
 # why?
 The library was written as a simple coding exercise, but then appeared useful to share :wink:
 
+# how?
+```
+npm install --save what-is
+```
+
 # what?
 `whatis()` function returns reasonable type names for tested values:
 
