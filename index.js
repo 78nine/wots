@@ -10,12 +10,18 @@ var QUICKEST = {
 }
 
 var QUICK = {
-  function: 'function'
+  function: 'function',
+  number: 'number',
+  string: 'string'
 }
 
 var OBJECTS = {
-  Arguments: 'arguments',
-  Error: 'error'
+  '[object Arguments]': 'arguments',
+  '[object Array]': 'array',
+  '[object Date]': 'date',
+  '[object Error]': 'error',
+  '[object Promise]': 'promise',
+  '[object RegExp]': 'regexp'
 }
 
 var toStr = Object.prototype.toString
@@ -31,7 +37,7 @@ module.exports = function whatis(test) {
   
   if (quick) return quick
   
-  var objType = toStr.call(test).slice(8, -1)
+  var objType = toStr.call(test)
   var secondLast = OBJECTS[objType]
   
   if (secondLast) return secondLast
