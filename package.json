@@ -1,5 +1,5 @@
 {
-  "name": "what-is",
+  "name": "wots",
   "description": "A very simple \"typeof\" detection",
   "version": "0.1.2",
   "main": "index.js",
@@ -26,7 +26,7 @@
   "author": "Greg Twardowski (https://github.com/tvardy)",
   "repository": {
     "type": "git",
-    "url": "git://github.com/tvardy/what-is.git"
+    "url": "git://github.com/tvardy/wots.git"
   },
   "license": "ISC"
 }
