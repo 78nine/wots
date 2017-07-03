@@ -1,15 +1,18 @@
 # why?
+
 The library was written as a simple coding exercise, but then appeared useful to share :wink:
 
+
 # how?
-```
+
+```bash
 npm install --save what-is
 ```
 
 and then
 
-```js
-var whatis = require('what-is');
+```javascript
+var whatis = require('wots');
 
 // ...
 
@@ -18,7 +21,9 @@ if (whatis(myNotAlwaysNumericVariable) === 'NaN') {
 }
 ```
 
+
 # what?
+
 `whatis()` function returns reasonable type names for tested values:
 
 | description         | input                               | result        |
@@ -60,3 +65,8 @@ if (whatis(myNotAlwaysNumericVariable) === 'NaN') {
 |                     | `Promise.reject(new Error('Oop!'))` | `'promise'`   |
 
 **Note:** for more examples see [test file](./index.test.js)
+
+
+# the name
+
+`wots` basically stands for `what is` but is shorter :wink:
