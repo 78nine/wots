@@ -4,6 +4,7 @@
   "version": "0.1.2",
   "main": "index.js",
   "scripts": {
+    "release": "release-commit",
     "test": "mocha *.test.js"
   },
   "keywords": [
@@ -20,8 +21,10 @@
     "type",
     "typeof"
   ],
+  "dependencies": {},
   "devDependencies": {
-    "mocha": "3.4.2"
+    "mocha": "3.4.2",
+    "release-commit": "1.0.1"
   },
   "author": "Greg Twardowski (https://github.com/tvardy)",
   "repository": {
