@@ -4,6 +4,7 @@
   "version": "0.1.3",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint --fix .",
     "release": "release-commit",
     "test": "mocha *.test.js"
   },
@@ -24,6 +25,12 @@
   "dependencies": {},
   "devDependencies": {
     "cz-conventional-changelog": "2.0.0",
+    "eslint": "4.1.1",
+    "eslint-config-standard": "10.2.1",
+    "eslint-plugin-import": "2.6.1",
+    "eslint-plugin-node": "5.1.0",
+    "eslint-plugin-promise": "3.5.0",
+    "eslint-plugin-standard": "3.0.1",
     "mocha": "3.4.2",
     "release-commit": "1.0.1"
   },
