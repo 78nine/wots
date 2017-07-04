@@ -50,7 +50,7 @@ if (whatis(myNotAlwaysNumericVariable) === 'NaN') {
 | objects             | `{ foo: 'bar'}`                     | `'object'`    |
 |                     | `{}`                                | `'object'`    |
 |                     | `new Object()`                      | `'object'`    |
-|                     | `Object.create(null)`               | **throws error** *(to be fixed)* |
+|                     | `Object.create(null)`               | `'object`     |
 | functions           | `function () {}`                    | `'function'`  |
 |                     | `new Function('return null')`       | `'function'`  |
 | date objects        | `new Date()`                        | `'date'`      |

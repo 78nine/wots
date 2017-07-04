@@ -145,6 +145,14 @@ describe('whatis:', function () {
       assert(whatis({ method: noop }) === 'object')
       assert(whatis(new Object()) === 'object')
       assert(whatis(Object.create(Object.create(Object.prototype))) === 'object')
+
+      var ObjectCreateNull = Object.create(null)
+
+      assert(whatis(ObjectCreateNull) === 'object')
+
+      ObjectCreateNull['foo'] = 'bar'
+
+      assert(whatis(ObjectCreateNull) === 'object')
     })
     
     it('Promise', function () {
