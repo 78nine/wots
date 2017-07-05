@@ -26,8 +26,7 @@ var OBJECTS = {
 
 var toStr = Object.prototype.toString
 
-// public
-module.exports = function wots (test) {
+var wots = function (test) {
   if (typeof test === 'object' && test !== null) {
     // fixes [#1](https://github.com/tvardy/wots/issues/1) before checking other possibilities
     if (!test.toString && !test.constructor) return 'object'
@@ -49,3 +48,28 @@ module.exports = function wots (test) {
 
   return test.constructor ? test.constructor.name.toLowerCase() : undefined
 }
+
+var methods = {
+  isNull: 'null',
+  isUndefined: 'undefined',
+  isString: 'string',
+  isNumber: 'number',
+  isNaN: 'NaN',
+  isInfinity: 'Infinity',
+  isBoolean: 'boolean',
+  isRegExp: 'regexp',
+  isArray: 'array',
+  isObject: 'object',
+  isFunction: 'function',
+  isDate: 'date',
+  isError: 'error',
+  isArguments: 'arguments',
+  isPromise: 'promise'
+}
+
+Object.keys(methods).forEach(function (key) {
+  wots[key] = function (test) { return wots(test) === methods[key] }
+})
+
+// public
+exports = module.exports = wots
