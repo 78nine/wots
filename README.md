@@ -2,29 +2,32 @@
 
 The library was written as a simple coding exercise, but then appeared useful to share :wink:
 
-
 # how?
 
 ```bash
-npm install --save what-is
+npm install --save wots
 ```
 
 and then
 
 ```javascript
-var whatis = require('wots');
+var wots = require('wots');
 
 // ...
 
-if (whatis(myNotAlwaysNumericVariable) === 'NaN') {
-    // do some stuff
+if (wots(myNotAlwaysNumericVariable) === 'NaN') {
+  // do some stuff
+  // e.g. console.log('I cannot count on it') 
+} else if (wots(myNotAlwaysNumericVariable) === 'Infinity') {
+  // do some other stuff
+  // e.g. console.log('Please do not force me to use this value in a loop!')  
 }
 ```
 
 
 # what?
 
-`whatis()` function returns reasonable type names for tested values:
+`wots()` function returns reasonable type names for tested values:
 
 | description         | input                               | result        |
 | :------------------ | :---------------------------------- |:------------- |
