@@ -1,3 +1,9 @@
+## 0.2.0 (2017-07-05)
+
+#### New Features
+
+* **methods:** add static methods returning boolean values (e.g. wots.isBoolean()) ([bdebcc0a](https://github.com/tvardy/wots/commit/bdebcc0a06ca1d2cccf7eb8f8ae1f282a1aa8008))
+
 ### 0.1.4 (2017-07-04)
 
 #### Bug Fixes
