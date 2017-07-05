@@ -69,6 +69,25 @@ if (wots(myNotAlwaysNumericVariable) === 'NaN') {
 
 **Note:** for more examples see [test file](./index.test.js)
 
+Since version 0.2.0 the library also exposes static methods listed below:
+
+```javascript
+wots.isNull()
+wots.isUndefined()
+wots.isString()
+wots.isNumber()
+wots.isNaN()
+wots.isInfinity()
+wots.isBoolean()
+wots.isRegExp()
+wots.isArray()
+wots.isObject()
+wots.isFunction()
+wots.isDate()
+wots.isError()
+wots.isArguments()
+wots.isPromise()
+```
 
 # the name
 
