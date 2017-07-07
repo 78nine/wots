@@ -8,18 +8,19 @@ var assert = require('assert')
 var noop = function () {}
 
 // tests
-describe('whatis:', function () {
-  it('should be a function', function () {
+suite('wots()', function () {
+  test('is a function', function () {
     assert(typeof wots === 'function')
   })
 
-  it('should recognize itself as a function', function () {
+  test('considers itself as a function', function () {
     assert(wots(wots) === 'function')
   })
 
-  describe('should properly recognize all JS primitives', function () {
+  suite('JS primitives', function () {
+
     // boolean
-    it('Boolean', function () {
+    test('Boolean', function () {
       assert(wots(true) === 'boolean')
       assert(wots(false) === 'boolean')
       assert(wots(new Boolean(1 / 2)) === 'boolean') // eslint-disable-line no-new-wrappers
@@ -31,18 +32,18 @@ describe('whatis:', function () {
     })
 
     // null
-    it('null', function () {
+    test('null', function () {
       assert(wots(null) === 'null')
     })
 
     // undefined
-    it('undefined', function () {
+    test('undefined', function () {
       assert(wots(undefined) === 'undefined')
       assert(wots() === 'undefined')
     })
 
     // Number
-    it('Number', function () {
+    test('Number', function () {
       assert(wots(42) === 'number')
       assert(wots(-1) === 'number')
       assert(wots(0) === 'number')
@@ -69,7 +70,7 @@ describe('whatis:', function () {
     })
 
     // String
-    it('String', function () {
+    test('String', function () {
       assert(wots('') === 'string')
       assert(wots('string') === 'string')
       assert(wots(['even', 'more', 'in', 'the', 'string'].join(' ')) === 'string')
@@ -77,8 +78,8 @@ describe('whatis:', function () {
     })
   })
 
-  describe('should point out "special" Number types as their own types', function () {
-    it('NaN', function () {
+  suite('"special" Number types', function () {
+    test('NaN', function () {
       assert(wots(NaN) === 'NaN')
       assert(wots(-NaN) === 'NaN')
       assert(wots(NaN - NaN) === 'NaN')
@@ -90,30 +91,30 @@ describe('whatis:', function () {
       assert(wots({} - {}) === 'NaN')
     })
 
-    it('Infinity', function () {
+    test('Infinity', function () {
       assert(wots(Infinity) === 'Infinity')
       assert(wots(-Infinity) === 'Infinity')
       assert(wots(1 / 0) === 'Infinity')
     })
   })
 
-  describe('should recognize some common types of built-in objects', function () {
-    it('function arguments', function () {
+  suite('common types of JS built-in objects', function () {
+    test('function arguments', function () {
       assert(wots(arguments) === 'arguments')
     })
 
-    it('Array', function () {
+    test('Array', function () {
       assert(wots([]) === 'array')
       assert(wots([ 1, null, 'array' ]) === 'array')
       assert(wots(new Array(10)) === 'array')
     })
 
-    it('Date', function () {
+    test('Date', function () {
       assert(wots(new Date()) === 'date')
       assert(wots(new Date('1981-01-03')) === 'date')
     })
 
-    it('Error', function () {
+    test('Error', function () {
       assert(wots(new Error('some error')) === 'error')
       assert(wots(new TypeError('you are not my type!')) === 'error')
       assert(wots(new RangeError('WHA?!')) === 'error')
@@ -131,7 +132,7 @@ describe('whatis:', function () {
       }
     })
 
-    it('Function', function () {
+    test('Function', function () {
       assert(wots(noop) === 'function')
       assert(wots(describe) === 'function')
       assert(wots(it) === 'function')
@@ -139,7 +140,7 @@ describe('whatis:', function () {
       assert(wots(new Function('return null;')) === 'function') // eslint-disable-line no-new-func
     })
 
-    it('Object', function () {
+    test('Object', function () {
       assert(wots({}) === 'object')
       assert(wots({ foo: 'bar' }) === 'object')
       assert(wots({ method: noop }) === 'object')
@@ -155,36 +156,36 @@ describe('whatis:', function () {
       assert(wots(ObjectCreateNull) === 'object')
     })
 
-    it('Promise', function () {
+    test('Promise', function () {
       assert(wots(new Promise(noop)) === 'promise')
       assert(wots(Promise.resolve('data')) === 'promise')
       assert(wots(Promise.reject('error!').catch(noop)) === 'promise') // eslint-disable-line prefer-promise-reject-errors
     })
 
-    it('RegExp', function () {
+    test('RegExp', function () {
       assert(wots(/^needle$/mi) === 'regexp')
       assert(wots(new RegExp('needle')) === 'regexp')
     })
   })
 
-  describe('should also handle any type of class-like functions', function () {
-    it('new MyClass()', function () {
+  suite('class-like functions', function () {
+    test('new MyClass()', function () {
       function MyClass (name) { this.name = name };
       assert(wots(new MyClass()) === 'myclass')
     })
 
-    it('new noop()', function () {
+    test('new noop()', function () {
       assert(wots(new noop()) === 'noop') // eslint-disable-line new-cap
     })
   })
+})
 
-  describe('should have shortcut methods returning boolean results', function () {
-    Object.keys(wots).forEach(function (key) {
-      it('.' + key + '()', function () {
-        assert(wots(wots[key]) === 'function')
-        assert(wots[key]() === (/undefined/i).test(key))
-        assert(wots(wots[key]()) === 'boolean')
-      })
+suite('wots', function () {
+  Object.keys(wots).forEach(function (key) {
+    test('.' + key + '()', function () {
+      assert(wots(wots[key]) === 'function')
+      assert(wots[key]() === (/undefined/i).test(key))
+      assert(wots(wots[key]()) === 'boolean')
     })
   })
 })
