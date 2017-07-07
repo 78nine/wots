@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint --fix .",
     "release": "release-commit",
-    "test": "mocha *.test.js"
+    "test": "mocha -u tdd *.test.js"
   },
   "keywords": [
     "isArray",
@@ -34,6 +34,7 @@
     "mocha": "3.4.2",
     "release-commit": "1.0.1"
   },
+  "issues": "https://github.com/tvardy/wots/issues",
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
