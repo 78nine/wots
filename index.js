@@ -27,25 +27,32 @@ var OBJECTS = {
 var toStr = Object.prototype.toString
 
 var wots = function (test) {
+  // fixes [#1](https://github.com/tvardy/wots/issues/1) before checking other possibilities
   if (typeof test === 'object' && test !== null) {
-    // fixes [#1](https://github.com/tvardy/wots/issues/1) before checking other possibilities
     if (!test.toString && !test.constructor) return 'object'
   }
 
+  // fixes [#2](https://github.com/tvardy/wots/issues/2) before checking QUICKEST
+  if (Object.keys(QUICKEST).some(function (el) { return el === test; })) return 'string'
+
+  // QUICKEST
   var quickest = QUICKEST[test]
 
   if (quickest) return quickest
 
+  // QUICK
   var typeOf = typeof test
   var quick = QUICK[typeOf]
 
   if (quick) return quick
 
+  // OBJECTS
   var objType = toStr.call(test)
   var secondLast = OBJECTS[objType]
 
   if (secondLast) return secondLast
 
+  // ALL OTHERS
   return test.constructor ? test.constructor.name.toLowerCase() : undefined
 }
 
