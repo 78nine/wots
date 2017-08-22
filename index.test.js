@@ -49,17 +49,9 @@ suite('wots()', function () {
       assert(wots(0) === 'number')
       assert(wots(Math.PI) === 'number')
 
-      // assert(whatis(015) === 'number')
-      // assert(whatis(0001) === 'number')
-      // assert(whatis(-0o77) === 'number')
-
       assert(wots(0x1123) === 'number')
       assert(wots(0x00111) === 'number')
       assert(wots(-0xF1A7) === 'number')
-
-      // assert(whatis(0b11) === 'number')
-      // assert(whatis(0b0011) === 'number')
-      // assert(whatis(-0b01) === 'number')
 
       assert(wots(-3.1E+12) === 'number')
       assert(wots(0.1e-23) === 'number')
@@ -95,6 +87,30 @@ suite('wots()', function () {
       assert(wots(Infinity) === 'Infinity')
       assert(wots(-Infinity) === 'Infinity')
       assert(wots(1 / 0) === 'Infinity')
+    })
+  })
+
+  suite('ambiguous strings', function () {
+    test('"false"', function () {
+      assert(wots('false') === 'string')
+    })
+    test('"Infinity"', function () {
+      assert(wots('Infinity') === 'string')
+    })
+    test('"-Infinity"', function () {
+      assert(wots('-Infinity') === 'string')
+    })
+    test('"null"', function () {
+      assert(wots('null') === 'string')
+    })
+    test('"NaN"', function () {
+      assert(wots('NaN') === 'string')
+    })
+    test('"true"', function () {
+      assert(wots('true') === 'string')
+    })
+    test('"undefined"', function () {
+      assert(wots('undefined') === 'string')
     })
   })
 
