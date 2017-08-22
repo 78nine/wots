@@ -1,3 +1,13 @@
+### 0.2.1 (2017-08-22)
+
+#### Bug Fixes
+
+* **strings:** fix handling ambiguous strings (e.g. 'true', 'null', 'NaN') ([e134b4c9](https://github.com/tvardy/wots/commit/e134b4c91028d34f4226bcb41c4f12866976ce90))
+
+#### Tests
+
+* **mocha:** use TDD UI ([0f04618d](https://github.com/tvardy/wots/commit/0f04618d3a751745de33a93969e354beab5d33d3))
+
 ## 0.2.0 (2017-07-05)
 
 #### New Features
