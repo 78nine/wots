@@ -11,16 +11,23 @@ npm install --save wots
 and then
 
 ```javascript
+// use as ES6 module
+import wots from 'wots';
+
+// use in NodeJs
 var wots = require('wots');
 
-// ...
+// use as global variable via UnPKG
+<script src="https://unpkg.com/wots"></script>
+
+// ... then ...
 
 if (wots(myNotAlwaysNumericVariable) === 'NaN') {
   // do some stuff
-  // e.g. console.log('I cannot count on it') 
+  // e.g. console.log('I cannot count on it')
 } else if (wots(myNotAlwaysNumericVariable) === 'Infinity') {
   // do some other stuff
-  // e.g. console.log('Please do not force me to use this value in a loop!')  
+  // e.g. console.log('Please do not force me to use this value in a loop!')
 }
 ```
 
