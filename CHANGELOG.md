@@ -1,3 +1,18 @@
+#### 0.2.2 (2020-04-29)
+
+##### Build System / Dependencies
+
+* **npm-scripts:**  extend build process ([31b335e6](https://github.com/tvardy/wots/commit/31b335e60a012e286fcbcce517bd814580553fa6))
+* **npm:**  update dependencies ([4f385b0e](https://github.com/tvardy/wots/commit/4f385b0ee3a255864668d20c93673c340b7af800))
+
+##### Documentation Changes
+
+*  update README.md ([223be44b](https://github.com/tvardy/wots/commit/223be44b194b273488bf06b1df7993e8d724f33b))
+
+##### Refactors
+
+*  add ES6 syntax and move files ([663c644a](https://github.com/tvardy/wots/commit/663c644aa428a8a1bc6212dd9d13fecfa2eb9719))
+
 ### 0.2.1 (2017-08-22)
 
 #### Bug Fixes
