@@ -1,7 +1,10 @@
-
 .idea/
 node_modules/
 
 logs
 *.log
 npm-debug.log*
+
+_index.js
+cjs.js
+min.js
