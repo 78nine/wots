@@ -1,5 +1,5 @@
 // source under test
-var wots = require('../cjs');
+var wots = require('../wots');
 
 // dependencies
 var assert = require('assert');
