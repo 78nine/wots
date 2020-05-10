@@ -6,15 +6,14 @@ export default {
   plugins: [
     resolve(),
     babel({
-      runtimeHelpers: true,
-      presets: ['@babel/preset-env']
+      runtimeHelpers: true
     })
   ],
   context: 'null',
   moduleContext: 'null',
   output: {
-    file: '_index.js',
-    format: 'iife',
-    name: 'wots'
+    file: 'wots.js',
+    name: 'wots',
+    format: 'umd'
   }
 };
