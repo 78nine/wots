@@ -38,11 +38,11 @@
   "devDependencies": {
     "@babel/core": "7.9.6",
     "@babel/preset-env": "7.9.6",
-    "cz-conventional-changelog": "3.1.0",
+    "cz-conventional-changelog": "3.2.0",
     "drop-babel-typeof": "1.0.3",
     "mocha": "7.1.2",
     "release-commit": "1.0.3",
-    "rollup": "2.7.5",
+    "rollup": "2.8.2",
     "rollup-plugin-babel": "4.4.0",
     "rollup-plugin-node-resolve": "5.2.0",
     "uglify-es": "3.3.9"
