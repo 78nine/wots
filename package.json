@@ -12,7 +12,7 @@
     "release": "release-commit",
     "prepack": "npm run build",
     "pretest": "npm run build",
-    "test": "mocha -u tdd test/*.test.js"
+    "test": "mocha -u tdd --require @babel/register test/*.test.js"
   },
   "keywords": [
     "isArray",
@@ -62,5 +62,8 @@
     "node": "10.x",
     "npm": "6.x"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@babel/register": "7.9.0"
+  }
 }
