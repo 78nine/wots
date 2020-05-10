@@ -1,7 +1,7 @@
 {
   "name": "wots",
   "description": "A very simple \"typeof\" detection",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "main": "wots.js",
   "module": "src/index.js",
   "unpkg": "wots.min.js",
@@ -42,7 +42,7 @@
     "drop-babel-typeof": "1.0.3",
     "mocha": "7.1.2",
     "release-commit": "1.0.3",
-    "rollup": "2.8.2",
+    "rollup": "2.9.0",
     "rollup-plugin-babel": "4.4.0",
     "rollup-plugin-node-resolve": "5.2.0",
     "uglify-es": "3.3.9"

@@ -1,3 +1,14 @@
+### 0.3.0 (2020-05-10)
+
+##### Build System / Dependencies
+
+* **format:**  change from CJS/Browser to UMD ([948320bb](https://github.com/tvardy/wots/commit/948320bbe0ed0cfe38b0ef42a0eb66f04df88e27))
+
+##### Tests
+
+* **format:**  test both: UMD and ES Module files ([60a050cb](https://github.com/tvardy/wots/commit/60a050cb8fe1c97f89e9fea8c58b0742b930e04b))
+*  prepare for more indepth tests ([bc877e94](https://github.com/tvardy/wots/commit/bc877e948184cfd47a269382f7cf4d793ee17db6))
+
 #### 0.2.2 (2020-04-29)
 
 ##### Build System / Dependencies
