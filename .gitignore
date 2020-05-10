@@ -5,6 +5,5 @@ logs
 *.log
 npm-debug.log*
 
-_index.js
-cjs.js
-min.js
+wots.js
+wots.min.js

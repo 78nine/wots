@@ -2,20 +2,16 @@
   "name": "wots",
   "description": "A very simple \"typeof\" detection",
   "version": "0.2.2",
-  "main": "cjs.js",
+  "main": "wots.js",
   "module": "src/index.js",
-  "unpkg": "min.js",
+  "unpkg": "wots.min.js",
   "scripts": {
-    "build": "npm run build:browser && npm run build:cjs",
-    "build:browser": "rollup --config browser.config.js",
-    "postbuild:browser": "drop-babel-typeof _index.js && npm run build:min",
-    "build:cjs": "rollup --config cjs.config.js",
-    "postbuild:cjs": "drop-babel-typeof cjs.js",
-    "build:min": "uglifyjs _index.js -c -m > min.js",
-    "postbuild:min": "rm _index.js",
+    "build": "rollup --config rollup.config.js",
+    "postbuild": "drop-babel-typeof wots.js && npm run build:min",
+    "build:min": "uglifyjs wots.js -c -m > wots.min.js",
     "release": "release-commit",
     "prepack": "npm run build",
-    "pretest": "npm run build:cjs",
+    "pretest": "npm run build",
     "test": "mocha -u tdd test/*.test.js"
   },
   "keywords": [
@@ -57,10 +53,14 @@
       "path": "cz-conventional-changelog"
     }
   },
-  "author": "Greg Twardowski (https://github.com/tvardy)",
+  "author": "Grzegorz (Greg) Twardowski (https://github.com/tvardy)",
   "repository": {
     "type": "git",
     "url": "git://github.com/tvardy/wots.git"
+  },
+  "engines": {
+    "node": "10.x",
+    "npm": "6.x"
   },
   "license": "ISC"
 }
