@@ -4,6 +4,7 @@
   "version": "0.3.0",
   "main": "wots.js",
   "module": "src/index.js",
+  "browser": "wots.min.js",
   "unpkg": "wots.min.js",
   "scripts": {
     "build": "rollup --config rollup.config.js",
