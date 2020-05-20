@@ -39,6 +39,7 @@
   "devDependencies": {
     "@babel/core": "7.9.6",
     "@babel/preset-env": "7.9.6",
+    "@babel/register": "7.9.0",
     "cz-conventional-changelog": "3.2.0",
     "drop-babel-typeof": "1.0.3",
     "mocha": "7.1.2",
@@ -63,8 +64,5 @@
     "node": "10.x",
     "npm": "6.x"
   },
-  "license": "ISC",
-  "dependencies": {
-    "@babel/register": "7.9.0"
-  }
+  "license": "ISC"
 }
