@@ -190,6 +190,13 @@ function testSuite (wots) {
       test('new noop()', function () {
         assert(wots(new noop()) === 'noop'); // eslint-disable-line new-cap
       });
+
+      test('no type found (the only non-string result)', function () {
+        const t = Object.create({});
+        t.constructor = null;
+
+        assert(wots(t) === undefined)
+      });
     });
   });
 

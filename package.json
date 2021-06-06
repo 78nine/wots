@@ -13,6 +13,7 @@
     "release": "release-commit",
     "prepack": "npm run build",
     "pretest": "npm run build",
+    "coverage": "nyc --reporter=text-summary --reporter=html --include=src/**/*.js npm test",
     "test": "mocha -u tdd --require @babel/register test/*.test.js"
   },
   "keywords": [
@@ -43,6 +44,7 @@
     "cz-conventional-changelog": "3.3.0",
     "drop-babel-typeof": "1.0.3",
     "mocha": "8.4.0",
+    "nyc": "15.1.0",
     "release-commit": "1.1.0",
     "rollup": "2.51.0",
     "rollup-plugin-babel": "4.4.0",
