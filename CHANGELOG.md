@@ -1,3 +1,15 @@
+#### 0.3.1 (2021-06-06)
+
+##### Build System / Dependencies
+
+* **npm:**
+  *  update deps ([fc3de75e](https://github.com/tvardy/wots/commit/fc3de75ec42e0f5da27d03721ff7dc8bf920ec8a))
+  *  update dependencies ([c58883d7](https://github.com/tvardy/wots/commit/c58883d7decef897e245a7cd3c5fcbc113ec6e76))
+
+##### Tests
+
+*  add coverage ([cb1b2265](https://github.com/tvardy/wots/commit/cb1b2265a818d3fbeb6144f33355e0c468fdbaae))
+
 ### 0.3.0 (2020-05-10)
 
 ##### Build System / Dependencies
