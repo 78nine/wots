@@ -37,14 +37,14 @@
     "*.md"
   ],
   "devDependencies": {
-    "@babel/core": "7.9.6",
-    "@babel/preset-env": "7.9.6",
-    "@babel/register": "7.9.0",
-    "cz-conventional-changelog": "3.2.0",
+    "@babel/core": "7.14.3",
+    "@babel/preset-env": "7.14.4",
+    "@babel/register": "7.13.16",
+    "cz-conventional-changelog": "3.3.0",
     "drop-babel-typeof": "1.0.3",
-    "mocha": "7.1.2",
+    "mocha": "8.4.0",
     "release-commit": "1.1.0",
-    "rollup": "2.10.5",
+    "rollup": "2.51.0",
     "rollup-plugin-babel": "4.4.0",
     "rollup-plugin-node-resolve": "5.2.0",
     "uglify-es": "3.3.9"
@@ -61,8 +61,8 @@
     "url": "git://github.com/tvardy/wots.git"
   },
   "engines": {
-    "node": "10.x",
-    "npm": "6.x"
+    "node": ">10.x",
+    "npm": ">6.x"
   },
   "license": "ISC"
 }
