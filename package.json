@@ -1,7 +1,7 @@
 {
   "name": "wots",
   "description": "A very simple \"typeof\" detection",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "main": "wots.js",
   "module": "src/index.js",
   "browser": "wots.min.js",
